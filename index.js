@@ -30,7 +30,7 @@ async function run() {
 
         // Home route
         app.get('/', (req, res) => {
-            res.send('🟢 API Running');
+            res.send('The server is perfectly running');
         });
 
         // Register route
@@ -142,7 +142,7 @@ async function run() {
             }
         });
 
-        // ✅ Restore deleted mood
+        //  Restore deleted mood
         app.patch('/api/restore-mood/:id', async (req, res) => {
             const id = req.params.id;
 
@@ -187,5 +187,5 @@ async function run() {
 run();
 
 app.listen(port, () => {
-    console.log(`🚀 Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
